@@ -21,7 +21,8 @@
 <script>
 
     // 서버 socket 접속용 객체 생성 및 연결
-    const socket = io.connect("http://127.0.0.1:3000", {path: "/socket.io", transports: ['websocket']});
+    //const socket = io.connect("http://127.0.0.1:3000", {path: "/socket.io", transports: ['websocket']});
+    const socket = io.connect("https://node-test-pi.vercel.app/", {path: "/socket.io", transports: ['websocket']});
 
     // # 연결(connect) 이벤트 처리
     socket.on('connect', ()=>{
